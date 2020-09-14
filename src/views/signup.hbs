@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h1>Signup</h1>
+            </div>
+            <div class="card-body">
+                <form action="/signup" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name" value="{{name}}" autofocus class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="workgroup">Work group</label>
+                        <input type="text" name="workgroup" id="workgroup" placeholder="Work group" class="form-control">
+                    </div>
+                    <button class="btn btn-primary btn-block" type="submit">Signin</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

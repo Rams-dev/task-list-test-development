@@ -1,0 +1,48 @@
+{{#if tasks}}
+<div class="row">
+{{#each tasks}}
+    <div class="col-md-3 col-ms-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex justify-content-end">
+                    <a href="/task/edit/{{id}}"><i class="far fa-edit"></i></a>
+                    <a href="/task/delete/{{id}}"><i class="fas fa-trash"></i></a>
+
+                </div>
+                
+                <h4>{{title}}</h4>
+            </div>
+            <div class="card-body p-3">
+                <div class="mt-0 d-flex justify-content-end" style="font-size: 11px;">
+                     <strong>  Task manager:</strong>
+                     <strong class="text-primary" >{{ name}} </strong>
+                </div>
+                <hr class="my-2" >
+                <p >{{description}}</p>
+                {{#if completed}}
+                <a class="btn btn-success btn-block">Finished</a>
+                {{else}}
+                <a href="/task/finish/{{id}}" class="btn btn-primary btn-block">Finish</a>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+{{/each}}
+</div>
+
+
+{{else}}
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3>There are not task yet</h3>
+            </div>
+            <div class="card-body">
+                <a href="/task/add" class="btn btn-primary btn-block">Would you like to add one?</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+
